@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item</title>
+</head>
+<body>
+
+<h1>Current Item👇</h1>
+
+<div>
+    <h3>{{item_id.name}}</h3>
+    <div>{{item_id.description}}</div>
+    <div>{{item_id.price}}</div>
+    <div>{{item_id.quantity}}</div>
+    <hr>
+</div>
+
+<h3>3 Random Items:</h3>
+
+{% for item in items %}
+<div>
+    <p><a href="{{ item.get_absolut_url }}">{{item.name}}</a></p>
+    <hr>
+</div>
+{% endfor %}
+
+</body>
+</html>
